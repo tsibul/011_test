@@ -1,3 +1,5 @@
-from start_end import start_notes
+from start_end import start_notes, exit_notes
 
-start_notes()
+notes_list = start_notes()
+
+exit_notes(notes_list)

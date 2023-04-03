@@ -38,3 +38,8 @@ class Notes:
         self.text = text
         self.date = datetime.date.today()
         self.time = datetime.datetime.now().time()
+
+    def to_csv(self):
+        return str(self.note_id) + ';' + self.title + ';' + self.text + ';' + \
+            datetime.datetime.strftime(self.date, '%d.%m.%Y') + ';' + datetime.time.strftime(self.time,
+                                                                                             '%H:%M:%S') + '\n'
