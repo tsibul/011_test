@@ -1,4 +1,4 @@
-from menu import print_menu, menu
+from menu import print_menu
 
 
 def process_flow(note_list, menu_item, menu_key):
