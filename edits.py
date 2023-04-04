@@ -3,7 +3,10 @@ from outputs import all_notes
 
 
 def add_note(notes_list):
-    max_id = max(map(lambda x: x.note_id, notes_list))
+    try:
+        max_id = max(map(lambda x: x.note_id, notes_list))
+    except:
+        max_id = 0
     title, text = input_note()
     note = Notes(max_id, title, text)
     notes_list.append(note)
