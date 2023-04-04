@@ -13,9 +13,11 @@ def start_notes():
     return notes_list
 
 
-def exit_notes(notes_list):
+def finish_notes(notes_list):
+    '''
+        :param notes_list: export to notes.csv
+    '''
     os.remove('notes.csv')
     with open('notes.csv', 'w') as db_file:
         for note in notes_list:
             db_file.write(note.to_csv())
-    return

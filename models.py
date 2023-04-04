@@ -30,8 +30,8 @@ class Notes:
                                                                     '%d.%m.%Y') + ' ' + self.title + ' ' + self.text
 
     def __str__(self):
-        return str(self.note_id) + ' ' + datetime.datetime.strftime(self.date,
-                                                                    '%d.%m.%Y') + ' ' + self.title + ' ' + self.text
+        return str(self.note_id) + ' | ' + datetime.datetime.strftime(self.date, '%d.%m.%Y') + ' | ' + self.title + (
+                    14 - len(self.title)) * ' ' + ' | ' + self.text
 
     def note_edit(self, title, text):
         self.title = title
